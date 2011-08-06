@@ -59,13 +59,16 @@
 <head>
 	
 	<!-- TITLE -->
-	<title><xsl:call-template name="page-title" /></title>
+	<title>
+		<xsl:apply-templates select="/data"  mode="site-title"/>
+	</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="{$workspace}/favicon.ico" />
 	
 	<!-- META -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="index, follow" />
+	<meta name="description" content="{//data/settings/entry/site-description}"/>
 
 	<!-- 960 GRID -->
    	<link rel="stylesheet" media="screen" href="{$workspace}/css/reset.css" type="text/css"/>
@@ -78,7 +81,7 @@
 	<!--COLORBOX-->
     <link rel="stylesheet" media="screen" href="{$workspace}/css/colorbox.css" type="text/css"/>
     
-	<meta name="google-site-verification" content="R3aVsR-zJAmGxBjV7MiTh8gmS-Rlry_Qsywz4pcSKp8" />
+	<meta name="google-site-verification" content="" />
 	
     <!--JS -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>    
@@ -92,9 +95,12 @@
 					
 	  	});
 	</script>
+	<script type="text/javascript" src="{$workspace}/js/jquery.scrollTo-1.4.2-min.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/javascript.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/jquery.timers-1.2.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="{$workspace}/js/jquery.plugins.js"></script>	
+	<script type="text/javascript" src="{$workspace}/js/jquery.scrollfollow.js"></script>
 
 </head>
 

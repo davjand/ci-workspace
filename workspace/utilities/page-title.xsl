@@ -8,9 +8,7 @@
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template name="page-title">
-	
-	<xsl:param name="site-title" select="//data/settings/entry/site-title" />
+<xsl:template match="data" mode="site-title" priority="-1">
 
 	<!--see what the page title is-->
 	<xsl:choose>
@@ -18,7 +16,14 @@
 			<xsl:value-of select="$site-title" />
 			<xsl:text> - Homepage </xsl:text>
 		</xsl:when>
-				
+		
+		<xsl:when test="$page-title='Product'">
+			<xsl:value-of select="//data/pi-product/entry/title" />
+			<xsl:text> - </xsl:text>		
+			<xsl:value-of select="$site-title" />
+		</xsl:when>
+		
+		
 		<!--otherwise nothing found -->
 		
 		<xsl:otherwise>
