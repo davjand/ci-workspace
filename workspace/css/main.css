@@ -183,6 +183,12 @@ body{
 
 }
 
+#veo img{
+	display: block;
+	margin-top: 6px;
+}
+#veo a:hover{background: none;}
+
 
 /****************************/
 /* MISC*/
