@@ -49,10 +49,11 @@
 
 <xsl:template match="/">
 	
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<xsl:comment><![CDATA[[if lt IE 7 ]><html xmlns:fb="http://ogp.me/ns/fb#" lang="en" class="no-js ie6 ]]><xsl:value-of select="concat('page-',$current-page)"/><![CDATA["><![endif]]]></xsl:comment>
+		<xsl:comment><![CDATA[[if IE 7 ]><html xmlns:fb="http://ogp.me/ns/fb#" lang="en" class="no-js ie7 ]]><xsl:value-of select="concat('page-',$current-page)"/><![CDATA["><![endif]]]></xsl:comment>
+		<xsl:comment><![CDATA[[if IE 8 ]><html xmlns:fb="http://ogp.me/ns/fb#" lang="en" class="no-js ie8 ]]><xsl:value-of select="concat('page-',$current-page)"/><![CDATA["><![endif]]]></xsl:comment>
+		<xsl:comment><![CDATA[[if IE 9 ]><html xmlns:fb="http://ogp.me/ns/fb#" lang="en" class="no-js ie9 ]]><xsl:value-of select="concat('page-',$current-page)"/><![CDATA["><![endif]]]></xsl:comment>
+		<xsl:comment><![CDATA[[if (gt IE 9)|!(IE)]><!]]></xsl:comment><html lang="en" xmlns:fb="http://ogp.me/ns/fb#" class="no-js page-{$current-page}"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
 <head>
 	
 	<!-- Basic Page Needs
@@ -66,6 +67,7 @@
 	<meta name="description" content="{//data/settings/entry/site-description}"/>
 	
 	<meta name="google-site-verification" content="{//data/settings/entry/google-site-verification}" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	
 	<!-- Mobile Specific Metas
   	================================================== -->
@@ -88,14 +90,13 @@
     
     <!-- Template CSS
 	================================================== -->
-    <link rel="stylesheet"  href="{$workspace}/css/typography.css" type="text/css"/>
-    
+    <link rel="stylesheet"  href="{$workspace}/css/typography.css" type="text/css"/>    
 	<link rel="stylesheet"  href="{$workspace}/css/main.css" type="text/css"/>
  
 
 </head>
 
-<body class="{$current-page}">
+<body class="page-{$current-page}">
 	<div id="bg">
 		<xsl:call-template name="header" />
 		
@@ -127,6 +128,7 @@
 		} catch(err) {}
 	</script> 
 	
+	<script type="text/javascript" src="{$workspace}/js/modernizr.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/jquery.plugins.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/tabs.js"></script>	
 	<script type="text/javascript" src="{$workspace}/js/javascript.js"></script>
