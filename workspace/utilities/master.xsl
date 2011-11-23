@@ -95,7 +95,7 @@
 
 </head>
 
-<body>
+<body class="{$current-page}">
 	<div id="bg">
 		<xsl:call-template name="header" />
 		
@@ -112,11 +112,20 @@
 	================================================== -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>    
 	<script type="text/javascript">
+		//GOOGLE JSAPI LOADING OF JQUERY, JQUERY UI AND MAPS
 		google.load("jquery", "1.7.0");
 		google.load("jqueryui", "1.8.16");
 		google.load('maps', '3', {other_params:'sensor=false'}); 
 	 	google.setOnLoadCallback(function() {<xsl:apply-templates select="//data" mode="init-js" />});
-	</script>
+		
+		//ANALYTICS
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		try {
+		var pageTracker = _gat._getTracker("<xsl:value-of select='//data/settings/entry/analytics-code'/>");
+		pageTracker._trackPageview();
+		} catch(err) {}
+	</script> 
 	
 	<script type="text/javascript" src="{$workspace}/js/jquery.plugins.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/tabs.js"></script>	
