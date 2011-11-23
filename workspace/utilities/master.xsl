@@ -11,13 +11,6 @@
 		xmlns:form="http://nick-dunn.co.uk/xslt/form-controls"
 		extension-element-prefixes="exsl form date">
 
-<xsl:output method="xml"
-    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-    omit-xml-declaration="yes"
-    encoding="UTF-8"
-    indent="yes" />
-
 <!-- ********************************* -->
 <!-- includes -->
 <!-- ********************************* -->
@@ -35,6 +28,13 @@
 <xsl:import href="image-format.xsl"/>
 <xsl:import href="navigation.xsl"/>
 
+
+<xsl:output method="xml"
+    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+    omit-xml-declaration="yes"
+    encoding="UTF-8"
+    indent="yes" />
 
 
 <!-- ********************************* -->
