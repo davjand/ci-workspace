@@ -19,12 +19,11 @@
 <xsl:import href="typography.xsl"/>
 <xsl:import href="html-truncate.xsl"/>
 <xsl:import href="date-time.xsl"/>
-<xsl:import href="nl2br.xsl"/>
 
 <!--custom utils-->
 <xsl:import href="header.xsl"/>
 <xsl:import href="footer.xsl"/>
-<xsl:import href="page-title.xsl"/>
+<xsl:import href="string.xsl"/>
 <xsl:import href="image-format.xsl"/>
 <xsl:import href="navigation.xsl"/>
 
@@ -136,6 +135,26 @@
 </body>
 </html>        	
                 
+</xsl:template>
+
+<!--site title-->
+<xsl:template match="data" mode="site-title" priority="-1">
+
+	<!--see what the page title is-->
+	<xsl:choose>
+		<xsl:when test="$page-title='Home'">
+			<xsl:value-of select="$site-title" />
+			<xsl:text> - Homepage </xsl:text>
+		</xsl:when>
+
+		
+		<!--otherwise nothing found -->		
+		<xsl:otherwise>
+			<xsl:value-of select="$page-title" />
+			<xsl:text> - </xsl:text>		
+			<xsl:value-of select="$site-title" />
+		</xsl:otherwise>	
+	</xsl:choose>
 </xsl:template>
 
 

@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<!-- string.xsl
+ * String Functions
+ * Author: David Anderson 2011
+ * dave@veodesign.co.uk
+-->
+<xsl:stylesheet version="1.0"
+		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+		xmlns:date="http://exslt.org/dates-and-times"
+		xmlns:exsl="http://exslt.org/common"
+		extension-element-prefixes="exsl date">
+
+<!--upper and lowercase-->
+<xsl:template name="upper-case">
+	<xsl:param name="text"/>
+	<xsl:value-of select="translate($text, 'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
+</xsl:template>
+
+<xsl:template name="lower-case">
+	<xsl:param name="text"/>
+	<xsl:value-of select="translate($text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')"/>
+</xsl:template>
+
 
 <!--
 	Example:
@@ -41,5 +62,7 @@
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
+
+
 
 </xsl:stylesheet>
