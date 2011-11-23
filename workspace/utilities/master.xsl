@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- master.xsl
- * 
  * Master xsl file for Symphony template 	
- *
- * Author: David Anderson 2010
+ * Author: David Anderson 2011
  * dave@veodesign.co.uk
 -->
-
 <xsl:stylesheet version="1.0"
 		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns:date="http://exslt.org/dates-and-times"
@@ -26,28 +23,24 @@
 <!-- ********************************* -->
 
 <!-- symphony utils -->
-<xsl:include href="typography.xsl"/>
-<xsl:include href="html-truncate.xsl"/>
-<xsl:include href="date-time.xsl"/>
+<xsl:import href="typography.xsl"/>
+<xsl:import href="html-truncate.xsl"/>
+<xsl:import href="date-time.xsl"/>
+<xsl:import href="nl2br.xsl"/>
 
 <!--custom utils-->
-<xsl:include href="header.xsl"/>
-<xsl:include href="footer.xsl"/>
-<xsl:include href="page-title.xsl"/>
-<xsl:include href="image-format.xsl"/>
-<xsl:include href="navigation.xsl"/>
-<xsl:include href="nl2br.xsl"/>
-<xsl:include href="pricing-utils.xsl"/>
+<xsl:import href="header.xsl"/>
+<xsl:import href="footer.xsl"/>
+<xsl:import href="page-title.xsl"/>
+<xsl:import href="image-format.xsl"/>
+<xsl:import href="navigation.xsl"/>
 
-
-
-<!-- js -->
-<xsl:include href="../js/init-js.xsl"/>
 
 
 <!-- ********************************* -->
 <!-- global variables -->
 <!-- ********************************* -->
+<xsl:variable name="site-title" select="//data/settings/entry/site-title" />
 
 
 <!-- ********************************* -->
@@ -55,75 +48,79 @@
 <!-- ********************************* -->
 
 <xsl:template match="/">
-<html>
+	
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 	
-	<!-- TITLE -->
-	<title>
-		<xsl:apply-templates select="/data"  mode="site-title"/>
-	</title>
+	<!-- Basic Page Needs
+  	================================================== -->
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><xsl:apply-templates select="data"  mode="site-title"/></title>
 	
-	<link rel="shortcut icon" type="image/x-icon" href="{$workspace}/favicon.ico" />
-	
-	<!-- META -->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Meta
+  	================================================== -->
 	<meta name="robots" content="index, follow" />
 	<meta name="description" content="{//data/settings/entry/site-description}"/>
-
-	<!-- 960 GRID -->
-   	<link rel="stylesheet" media="screen" href="{$workspace}/css/reset.css" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="{$workspace}/css/960.css" type="text/css"/>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" media="screen" href="{$workspace}/css/typography.css" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="{$workspace}/css/main.css" type="text/css"/>
 	
-	<!--COLORBOX-->
-    <link rel="stylesheet" media="screen" href="{$workspace}/css/colorbox.css" type="text/css"/>
-    
-	<meta name="google-site-verification" content="" />
+	<meta name="google-site-verification" content="{//data/settings/entry/google-site-verification}" />
 	
-    <!--JS -->
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>    
-	<script type="text/javascript">
-		google.load("jquery", "1.4.2");
-		google.load("jqueryui", "1.8.4");
-		google.load('maps', '3', {other_params:'sensor=false'}); 
+	<!-- Mobile Specific Metas
+  	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="{$workspace}/images/favicon.ico">
+	<link rel="apple-touch-icon" href="{$workspace}/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{$workspace}/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{$workspace}/images/apple-touch-icon-114x114.png">
+	
 
-	 	google.setOnLoadCallback(function() {
-			<xsl:call-template name="init-page-js" />	
-					
-	  	});
-	</script>
-	<script type="text/javascript" src="{$workspace}/js/jquery.scrollTo-1.4.2-min.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/javascript.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/jquery.timers-1.2.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/jquery.colorbox-min.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/jquery.plugins.js"></script>	
-	<script type="text/javascript" src="{$workspace}/js/jquery.scrollfollow.js"></script>
+	<!-- Skeleton
+	================================================== -->
+   	<link rel="stylesheet" href="{$workspace}/css/base.css">
+	<link rel="stylesheet" href="{$workspace}/css/skeleton.css">
+	<link rel="stylesheet" href="{$workspace}/css/layout.css">
+	<link rel="stylesheet" href="{$workspace}/css/colorbox.css" type="text/css"/>
+    
+    <!-- Template CSS
+	================================================== -->
+    <link rel="stylesheet"  href="{$workspace}/css/typography.css" type="text/css"/>
+    
+	<link rel="stylesheet"  href="{$workspace}/css/main.css" type="text/css"/>
+ 
 
 </head>
 
 <body>
-<div id="bg">
-	<xsl:call-template name="header" />
-	
-	<div id="wrapper">
-		<div class="container_16">
-					
-			<xsl:apply-templates match="data" />
-			
-			<div class="clear"></div>
-			
+	<div id="bg">
+		<xsl:call-template name="header" />
+		
+		<div id="wrapper">
+			<div class="container">						
+				<xsl:apply-templates match="data" />
+			</div>
 		</div>
-	</div>
-	
-	<div class="container_16">
-		<xsl:call-template name="footer" />	
-	</div>
-	
-</div><!-- #bg -->
+				
+		<xsl:call-template name="footer" />		
+	</div><!-- #bg -->
 
+    <!-- JS
+	================================================== -->
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>    
+	<script type="text/javascript">
+		google.load("jquery", "1.7.0");
+		google.load("jqueryui", "1.8.16");
+		google.load('maps', '3', {other_params:'sensor=false'}); 
+	 	google.setOnLoadCallback(function() {<xsl:apply-templates select="//data" mode="init-js" />});
+	</script>
+	
+	<script type="text/javascript" src="{$workspace}/js/jquery.plugins.js"></script>
+	<script type="text/javascript" src="{$workspace}/js/tabs.js"></script>	
+	<script type="text/javascript" src="{$workspace}/js/javascript.js"></script>
 
 </body>
 </html>        	

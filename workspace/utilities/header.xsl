@@ -13,8 +13,9 @@
 	extension-element-prefixes="exsl form">
 
 <xsl:template name="header">
+	
 	<div id="header">
-		<div class="container_16">
+		<div class="container">
 						
 		
 		</div>
@@ -24,8 +25,6 @@
 
 	
 </xsl:template>
-
-
 
 <!-- ##########  TEMPLATE POSITIONS  ########## -->
 

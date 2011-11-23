@@ -16,24 +16,15 @@
 			<xsl:value-of select="$site-title" />
 			<xsl:text> - Homepage </xsl:text>
 		</xsl:when>
+
 		
-		<xsl:when test="$page-title='Product'">
-			<xsl:value-of select="//data/pi-product/entry/title" />
-			<xsl:text> - </xsl:text>		
-			<xsl:value-of select="$site-title" />
-		</xsl:when>
-		
-		
-		<!--otherwise nothing found -->
-		
+		<!--otherwise nothing found -->		
 		<xsl:otherwise>
 			<xsl:value-of select="$page-title" />
 			<xsl:text> - </xsl:text>		
 			<xsl:value-of select="$site-title" />
-		</xsl:otherwise>
-	
+		</xsl:otherwise>	
 	</xsl:choose>
-
 </xsl:template>
 
 </xsl:stylesheet>

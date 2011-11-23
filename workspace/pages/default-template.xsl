@@ -5,16 +5,11 @@
 
 
 <!-- ********************************* -->
-<!-- javascript init -->
+<!-- page init -->
 <!-- ********************************* -->
-<xsl:template name="init-page-js"> 
-	<!--init the carousel-->
-	<xsl:call-template name="js-init-carousel">
-		<xsl:with-param name="wrapper-id" select="'#home-carousel'"/>
-		<xsl:with-param name="duration" select="'7000'" />
-	</xsl:call-template>
-</xsl:template>
 
+<!--<xsl:template match="data" mode="init-js"></xsl:template>-->
+<!--<xsl:template match="data" mode="site-title"></xsl:template>-->
 
 
 <!-- ********************************* -->
