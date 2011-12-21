@@ -63,7 +63,9 @@
 	<!-- Meta
   	================================================== -->
 	<meta name="robots" content="index, follow" />
-	<meta name="description" content="{//data/settings/entry/site-description}"/>
+	<meta name="description">
+		<xsl:attribute name="content"><xsl:apply-templates select="data"  mode="site-description"/></xsl:attribute>
+	</meta>
 	
 	<meta name="google-site-verification" content="{//data/settings/entry/google-site-verification}" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -156,6 +158,12 @@
 		</xsl:otherwise>	
 	</xsl:choose>
 </xsl:template>
+
+<!--meta-->
+<xsl:template match="data" mode="site-description" priority="-1">	
+	<xsl:value-of select="//data/settings/entry/site-description" />
+</xsl:template>
+
 
 
 </xsl:stylesheet>

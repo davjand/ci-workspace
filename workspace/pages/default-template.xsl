@@ -10,6 +10,11 @@
 
 <!--<xsl:template match="data" mode="init-js"></xsl:template>-->
 <!--<xsl:template match="data" mode="site-title"></xsl:template>-->
+<!--
+<xsl:template match="data" mode="site-description" >	
+	<xsl:value-of select="substring(,1,160)" />
+</xsl:template>
+-->
 
 
 <!-- ********************************* -->
