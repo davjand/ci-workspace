@@ -164,6 +164,7 @@
 	<xsl:value-of select="//data/settings/entry/site-description" />
 </xsl:template>
 
+<xsl:template match="data" mode="init-js" priority="-1"></xsl:template>
 
 
 </xsl:stylesheet>
