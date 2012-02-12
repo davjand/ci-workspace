@@ -41,7 +41,7 @@ git submodule add git://github.com/nickdunn/symql.git "extensions/symql"
 git submodule add git://github.com/hananils/subsectionmanager.git "extensions/subsectionmanager"
 
 git submodule add git://github.com/pixelninja/sitemap_xml.git "extensions/sitemap_xml"
-git submodule add git://github.com/vlad-ghita/static_section.git "extensions/static_section"
+git submodule add git://github.com/knupska/static_section.git "extensions/static_section"
 git submodule add git://github.com/michael-e/uniqueuploadfield.git "extensions/uniqueuploadfield"
 
 git submodule add git://github.com/scottkf/massuploadutility.git "extensions/massuploadutility"
