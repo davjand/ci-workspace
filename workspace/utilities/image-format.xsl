@@ -5,15 +5,105 @@
  *
  * Author: David Anderson 2010
 -->
-
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+
+<!-- fit an image to an area without cropping-->
+<!--
+<xsl:call-template name="image-fit">
+	<xsl:with-param name="item" select="" />
+	<xsl:with-param name="width" select="" />
+	<xsl:with-param name="height" select="" />
+	<xsl:with-param name="alt" select="" />
+</xsl:call-template>
+-->
+<xsl:template name="image-fit">
+	<xsl:param name="item" />
+	<xsl:param name="width" />
+	<xsl:param name="height"/>
+	<xsl:param name="alt" />
+	
+	<xsl:param name="blank-image" select="//data/settings/entry/default-image"/>
+	
+	<xsl:variable name="source-w">
+		<xsl:choose>
+			<xsl:when test="$item/meta/@width">
+				<xsl:value-of select="$item/meta/@width"/>
+			</xsl:when>
+			
+			<xsl:otherwise>
+				<xsl:value-of select="$blank-image/meta/@width"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
+	<xsl:variable name="source-h">
+		<xsl:choose><xsl:when test="$item/meta/@height">
+			<xsl:value-of select="$item/meta/@height"/>
+		</xsl:when>
+		
+		<xsl:otherwise>
+			<xsl:value-of select="$blank-image/meta/@height"/>
+		</xsl:otherwise></xsl:choose>
+	</xsl:variable>
+
+	<xsl:variable name="scale-factor-1" select="$height div $source-h" />
+	<xsl:variable name="scale-factor-2" select="$width div $source-w" />
+	
+	<xsl:variable name="scale-factor">
+		<xsl:choose>
+			<xsl:when test="($scale-factor-1 * $source-w) &lt;= $width">
+				<xsl:value-of select="$scale-factor-1"/>			
+			</xsl:when>
+			<xsl:when test="($scale-factor-2 * $source-h) &lt;= $height">
+				<xsl:value-of select="$scale-factor-2"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:variable>
+	
+	<xsl:variable name="filename">
+		<xsl:choose><xsl:when test="string-length($item/filename) &gt; 0">
+			<xsl:value-of select="$item/filename"/>
+		</xsl:when><xsl:otherwise>
+			<xsl:value-of select="$blank-image/filename"/>
+		</xsl:otherwise></xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="path">
+		<xsl:choose><xsl:when test="string-length($item/filename) &gt; 0">
+			<xsl:value-of select="$item/@path"/>
+		</xsl:when><xsl:otherwise>
+			<xsl:value-of select="$blank-image/@path"/>
+		</xsl:otherwise></xsl:choose>
+	</xsl:variable>
+	
+	<img>
+		<xsl:attribute name="src">
+			<xsl:call-template name="image-path">
+				<xsl:with-param name="mode" select="'resize'"/>
+				<xsl:with-param name="file" select="$filename"/>
+				<xsl:with-param name="path" select="$path"/>		
+				<xsl:with-param name="width" select="round($source-w * $scale-factor)"/>
+				<xsl:with-param name="height" select="round($source-h * $scale-factor)"/>
+			</xsl:call-template>
+		</xsl:attribute>
+		
+		<xsl:attribute name="height">
+			<xsl:value-of select="round($source-h * $scale-factor)"/>
+		</xsl:attribute>
+		
+		<xsl:attribute name="width">
+			<xsl:value-of select="round($source-w * $scale-factor)"/>		
+		</xsl:attribute>
+		
+		<xsl:attribute name="alt" select="$alt" />	
+	</img>
+
+</xsl:template>
 
 
 
 <!-- general image -->
 <!--*********************************************
-
 ##sample code
 
 <xsl:call-template name="image">
@@ -123,11 +213,8 @@
 				<xsl:with-param name="height" select="$height"/>
 			</xsl:call-template>
 		</xsl:attribute>
-	
 	</img>
 		
-		
-	
 </xsl:template>
 
 
@@ -178,6 +265,10 @@
 		
 		<xsl:when test="$real-mode='crop-fill'">
 			<xsl:value-of select="concat( $root , '/image/2/' , $width ,'/', $height ,'/5/0/', $path , '/' , $file)" />	
+		</xsl:when>
+		
+		<xsl:when test="$real-mode='resize-canvas'">
+			<xsl:value-of select="concat( $root , '/image/3/' , $width ,'/', $height ,'/5/fff/0/', $path , '/' , $file)" />	
 		</xsl:when>
 		
 		<xsl:otherwise>
