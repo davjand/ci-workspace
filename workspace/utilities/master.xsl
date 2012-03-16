@@ -21,12 +21,8 @@
 <xsl:import href="date-time.xsl"/>
 
 <!--custom utils-->
-<xsl:import href="header.xsl"/>
-<xsl:import href="footer.xsl"/>
 <xsl:import href="string.xsl"/>
 <xsl:import href="image-format.xsl"/>
-<xsl:import href="navigation.xsl"/>
-
 
 <xsl:output method="xml"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -99,7 +95,13 @@
 
 <body class="page-{$current-page}">
 	<div id="bg">
-		<xsl:call-template name="header" />
+		<div id="header">
+			<div class="container">
+							
+			
+			</div>
+		</div> <!-- #header -->
+		
 		
 		<div id="wrapper">
 			<div class="container">						
@@ -107,7 +109,16 @@
 			</div>
 		</div>
 				
-		<xsl:call-template name="footer" />		
+		<div id="footer">		
+			<div class="container">
+				<div class="sixteen columns">
+					<xsl:text>Copyright </xsl:text>
+					<xsl:value-of select="$site-title"/>
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="$this-year"/>				
+				</div>
+			</div>
+		</div>	
 	</div><!-- #bg -->
 
     <!-- JS
