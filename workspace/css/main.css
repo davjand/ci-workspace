@@ -10,11 +10,20 @@
 /****************************
 * GENERAL PAGE
 ****************************/
-body{
-
-
+body {
+	font: 14px/22px Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
+a:link, a:visited,  a:active {}
+a:hover {}
+
+
+h1{}
+h2{}
+h3{}
+h4{}
+p{}
 
 
 /****************************
@@ -38,123 +47,37 @@ body{
 
 
 
-/*
-* NAV
+/****************************
+* NAVIGATION
 ****************************/
-#header-nav {
 
-}
-
-#header-nav ul{
-
-}
-
-#header-nav ul li{
-
-}
-
-#header-nav ul li a{
-
-	
-}
-#header-nav ul li a:hover{
-
-}
+#navigation {}
+#navigation ul{}
+#navigation ul li{}
+#navigation ul li a{}
+#navigation ul li a:hover{}
 
 
 
 /****************************
-* CONTENT
+* LAYOUT
 ****************************/
-
-
-
-
-#wrapper{
-
-}
-
+#wrapper{}
 
 
 /****************************
 * PAGE SPECIFIC
 ****************************/
 
-
-
+/****************************
+* ELEMENT SPECIFIC
+****************************/
 
 
 /****************************
-* CONTACT
+* FORMS
 ****************************/
-#map{
 
-}
-
-.form input{
-	padding: 6px;	
-}
-
-.form input.text{
-	padding: 5px;	
-	width: 200px;
-}
-
-
-.form{
-	margin-top: 18px;	
-}
-
-.form textarea{
-	padding: 5px;	
-}
-
-.form form label > div, .form form > div{
-	margin-bottom: 5px;
-	
-}
-
-.form .l{
-	text-align: right;		
-	padding-top: 6px;
-}
-
-.form .l.msg{
-	padding-top: 50px;	
-}
-
-.form .validation-summary.error{
-	background: #ffbbbb;
-	padding: 15px;
-	
-	margin: 0px 0px 12px;	
-}
-
-.form .validation-summary.error .error-msg{
-	font-weight: 700;
-	font-size: 24px;
-	color: #ee0000;
-	margin-bottom: 12px;
-}
-
-.form .validation-summary.error ul li{
-	list-style: disc;
-	margin-left: 20px;	
-	color: #000000;
-}
-
-.form-success{
-	text-align: center;
-	padding: 10px;
-	margin: 20px 0px;
-	background-color: #CDEB8B;
-	
-	color: #5da262 !important;
-}
-
-/****************************
-* CAROUSEL
-****************************/
 
 
 
@@ -162,32 +85,11 @@ body{
 * FOOTER
 ****************************/
 
-#footer{
-	text-align: center;
-
-}
-
-#footer span{
-
-}
-
-#footer a{
-
-
-}
-#footer a:hover{
-
-}
-
-#footer p{
-
-}
-
-#veo img{
-	display: block;
-	margin-top: 6px;
-}
-#veo a:hover{background: none;}
+#footer{}
+#footer p{}
+#footer span{}
+#footer a{}
+#footer a:hover{}
 
 
 /****************************/
