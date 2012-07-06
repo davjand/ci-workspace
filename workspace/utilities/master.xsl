@@ -35,8 +35,8 @@
 <!-- ********************************* -->
 <!-- global variables -->
 <!-- ********************************* -->
-<xsl:variable name="site-title" select="//data/settings/entry/site-title" />
-
+<xsl:variable name="settings" select="//data/settings" />
+<xsl:variable name="site-title" select="$settings/entry/site-title" />
 
 <!-- ********************************* -->
 <!-- root template -->
@@ -97,8 +97,12 @@
 	<div id="bg">
 		<div id="header">
 			<div class="container">
-							
-			
+				<div id="header-logo">
+					<a href="$root"></a>
+				</div>
+				<div id="navigation">
+				
+				</div>			
 			</div>
 		</div> <!-- #header -->
 		
@@ -128,27 +132,22 @@
 		//GOOGLE JSAPI LOADING OF JQUERY, JQUERY UI AND MAPS
 		google.load("jquery", "1.7.0");
 		google.load("jqueryui", "1.8.16");
-		google.load('maps', '3', {other_params:'sensor=false'}); 
+		//google.load('maps', '3', {other_params:'sensor=false'}); 
 	 	google.setOnLoadCallback(function() {<xsl:apply-templates select="//data" mode="init-js" />});
 		
 		//ANALYTICS
-		
-	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '<xsl:value-of select='//data/settings/entry/analytics-code'/>']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
+	  	var _gaq = _gaq || [];
+	  	_gaq.push(['_setAccount', '<xsl:value-of select='//data/settings/entry/analytics-code'/>']);
+	  	_gaq.push(['_trackPageview']);
+	  	(function() {
+	  	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  	})();
 	</script> 
 	
 	<script type="text/javascript" src="{$workspace}/js/modernizr.js"></script>
 	<script type="text/javascript" src="{$workspace}/js/jquery.plugins.js"></script>
-	<script type="text/javascript" src="{$workspace}/js/tabs.js"></script>	
 	<script type="text/javascript" src="{$workspace}/js/javascript.js"></script>
 
 </body>
