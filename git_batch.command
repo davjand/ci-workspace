@@ -1,4 +1,29 @@
-git submodule add git://github.com/pointybeard/asdc.git "extensions/asdc"
+
+
+
+
+### USER INTERFACE
+git submodule add git://github.com/6ui11em/form_select2.git extensions/form_select2 --recursive
+
+
+# DEVELOPMENTAL WORKFLOW
+git submodule add git://github.com/nils-werner/less_compiler.git "extensions/less_compiler" --recursive
+git submodule add git://github.com/nils-werner/xslresourceloader.git "extensions/xslresourceloader" --recursive
+git submodule add git://github.com/ahwayakchih/sortdatasourcebyparam.git "extensions/sortdatasourcebyparam" --recursive
+
+
+
+### ESSENTIALS
+git submodule add git://github.com/Solutions-Nitriques/static_section.git "extensions/static_section" --recursive
+
+git submodule add git://github.com/ahwayakchih/improvedpageresolve.git "extensions/improvedpageresolve" --recursive
+
+
+
+### MISC
+git submodule add git://github.com/pixelninja/sitemap_xml.git "extensions/sitemap_xml" --recursive
+
+
 git submodule add git://github.com/Solutions-Nitriques/anti_brute_force.git "extensions/anti_brute_force"
 git submodule add git://github.com/Solutions-Nitriques/auto_collapse_fields.git "extensions/auto_collapse_fields"
 
