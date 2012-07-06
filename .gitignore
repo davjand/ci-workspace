@@ -1,0 +1,16 @@
+._*
+.Apple*
+.DS_Store
+*.esproj
+*~
+*.geany
+install-log.txt
+manifest/cache
+manifest/tmp
+_docs/
+symphony-2.wiki/
+extensions/
+symphony/
+LICENSE
+install/
+workspace/uploads
