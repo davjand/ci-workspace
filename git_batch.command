@@ -95,7 +95,11 @@ git submodule add git://github.com/kanduvisla/ckeditor.git extensions/ckeditor -
 
 ### ESSENTIALS EXTENSIONS
 #
-git submodule add git://github.com/Solutions-Nitriques/static_section.git extensions/static_section --recursive
+###git submodule add git://github.com/Solutions-Nitriques/static_section.git extensions/static_section --recursive
+###Seems to be buggy, alternative below:
+git submodule add git://github.com/vlad-ghita/limit_section_entries.git extensions/limit_section_entries --recursive
+
+ 
 git submodule add git://github.com/ahwayakchih/improvedpageresolve.git extensions/improvedpageresolve --recursive
 git submodule add git://github.com/symphonists/globalresourceloader.git extensions/globalresourceloader --recursive
 git submodule add git://github.com/bauhouse/configuration.git extensions/configuration --recursive
