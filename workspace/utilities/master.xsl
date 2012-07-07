@@ -90,6 +90,11 @@
     <link rel="stylesheet"  href="{$workspace}/css/typography.css" type="text/css"/>    
 	<link rel="stylesheet"  href="{$workspace}/css/main.css" type="text/css"/>
  
+ 
+	<!-- JQuery and JQuery UI bases
+	================================================== -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
 
 </head>
 
@@ -128,13 +133,7 @@
     <!-- JS
 	================================================== -->
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>    
-	<script type="text/javascript">
-		//GOOGLE JSAPI LOADING OF JQUERY, JQUERY UI AND MAPS
-		google.load("jquery", "1.7.0");
-		google.load("jqueryui", "1.8.16");
-		//google.load('maps', '3', {other_params:'sensor=false'}); 
-	 	google.setOnLoadCallback(function() {<xsl:apply-templates select="//data" mode="init-js" />});
-		
+	<script type="text/javascript">		
 		//ANALYTICS
 	  	var _gaq = _gaq || [];
 	  	_gaq.push(['_setAccount', '<xsl:value-of select='//data/settings/entry/analytics-code'/>']);
