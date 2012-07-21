@@ -24,7 +24,6 @@
 git remote add symphony git@github.com:symphonycms/symphony-2.git
 git fetch symphony
 git merge symphony/master --no-edit
-git submodule update --init
 #
 ###
 
