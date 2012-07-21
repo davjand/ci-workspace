@@ -67,6 +67,7 @@ git submodule add git@github.com:nickdunn/symql.git extensions/symql --recursive
 ### AUTOMATION / DEPLOYMENT
 #
 git submodule add git@github.com:lewiswharf/symlink_manifest.git extensions/symlink_manifest --recursive
+git submodule add git@github.com:davjand/db_migrations.git extensions/db-migrations --recursive
 #
 ###
 
