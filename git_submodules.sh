@@ -1,4 +1,4 @@
-### SYMPHONY DEFAULT INSTALLATIONS
+### SYMPHONY SUBMODULE INSTALLATTION
 #
 # Common Extensions are at the bottom, ones that may not be required are listed at the top
 # @author: David Anderson
