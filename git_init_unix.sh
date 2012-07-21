@@ -29,18 +29,37 @@ git submodule update --init
 ###
 
 
-
 ### Re-add all symphony default extensions as can prevent errors
 #
-#rm .gitmodules
-#git submodule add git@github.com:symphonycms/debugdevkit.git extensions/debugdevkit --recursive
-#git submodule add git@github.com:symphonycms/export_ensemble.git extensions/export_ensemble --recursive
-#git submodule add git@github.com:symphonycms/jit_image_manipulation.git extensions/jit_image_manipulation --recursive
-#git submodule add git@github.com:symphonycms/maintenance_mode.git extensions/maintenance_mode --recursive
-#git submodule add git@github.com:symphonycms/markdown.git extensions/markdown --recursive
-#git submodule add git@github.com:symphonycms/profiledevkit.git extensions/profiledevkit --recursive
-#git submodule add git@github.com:symphonycms/selectbox_link_field.git extensions/selectbox_link_field --recursive
-#git submodule add git@github.com:symphonycms/xssfilter.git extensions/xssfilter --recursive
+rm .gitmodules
+touch .gitmodules
+
+git rm --cached extensions/debugdevkit 
+git rm --cached extensions/export_ensemble
+git rm --cached extensions/jit_image_manipulation
+git rm --cached extensions/maintenance_mode
+git rm --cached extensions/markdown
+git rm --cached extensions/profiledevkit
+git rm --cached extensions/selectbox_link_field
+git rm --cached extensions/xssfilter
+
+rm -r extensions/debugdevkit 
+rm -r extensions/export_ensemble
+rm -r extensions/jit_image_manipulation
+rm -r extensions/maintenance_mode
+rm -r extensions/markdown
+rm -r extensions/profiledevkit
+rm -r extensions/selectbox_link_field
+rm -r extensions/xssfilter
+
+git submodule add git@github.com:symphonycms/debugdevkit.git extensions/debugdevkit --recursive
+git submodule add git@github.com:symphonycms/export_ensemble.git extensions/export_ensemble --recursive
+git submodule add git@github.com:symphonycms/jit_image_manipulation.git extensions/jit_image_manipulation --recursive
+git submodule add git@github.com:symphonycms/maintenance_mode.git extensions/maintenance_mode --recursive
+git submodule add git@github.com:symphonycms/markdown.git extensions/markdown --recursive
+git submodule add git@github.com:symphonycms/profiledevkit.git extensions/profiledevkit --recursive
+git submodule add git@github.com:symphonycms/selectbox_link_field.git extensions/selectbox_link_field --recursive
+git submodule add git@github.com:symphonycms/xssfilter.git extensions/xssfilter --recursive
 #
 ###
 
