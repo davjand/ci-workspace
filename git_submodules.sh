@@ -32,7 +32,6 @@ git submodule add git@github.com:nickdunn/publishfiltering.git extensions/publis
 git submodule add git@github.com:alpacaaa/resave_entries.git extensions/resave_entries --recursive
 git submodule add git@github.com:nickdunn/sitemap.git extensions/sitemap --recursive
 git submodule add git@github.com:nickdunn/entity_diagram.git extensions/entity_diagram --recursive
-git submodule add git@github.com:Solutions-Nitriques/anti_brute_force.git extensions/anti_brute_force --recursive
 #
 ###
 
@@ -102,7 +101,8 @@ git submodule add git@github.com:vlad-ghita/limit_section_entries.git extensions
  
 git submodule add git@github.com:ahwayakchih/improvedpageresolve.git extensions/improvedpageresolve --recursive
 git submodule add git@github.com:symphonists/globalresourceloader.git extensions/globalresourceloader --recursive
-git submodule add git@github.com:bauhouse/configuration.git extensions/configuration --recursive
+###git submodule add git@github.com:bauhouse/configuration.git extensions/configuration --recursive ## IS CAUSING ERRORS
 git submodule add git@github.com:symphonycms/content_type_mappings.git extensions/content_type_mappings --recursive
+
 #
 ###

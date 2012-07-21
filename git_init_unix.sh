@@ -70,6 +70,12 @@ git submodule update --init
 #
 ###
 
+### FILE PERMISSIONS (NOT NEEDS CHANGING AFTER INSTALL)
+#
+chmod -R 777 . 
+#
+###
+
 ### REMOTE REPO SETUP
 #
 
