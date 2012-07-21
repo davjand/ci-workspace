@@ -89,7 +89,7 @@ git submodule update --init
 #
 ###
 
-### FILE PERMISSIONS (NOT NEEDS CHANGING AFTER INSTALL)
+### FILE PERMISSIONS (NEEDS CHANGING AFTER INSTALL)
 #
 chmod -R 777 . 
 #

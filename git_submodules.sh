@@ -49,7 +49,7 @@ git submodule add git@github.com:Solutions-Nitriques/save_and_return.git extensi
 #
 git submodule add git@github.com:nils-werner/dump_db.git extensions/dump_db --recursive
 git submodule add git@github.com:lewiswharf/symlink_manifest.git extensions/symlink_manifest --recursive
-git submodule add git@github.com:davjand/database-migrations.git extensions/db-migrations --recursive
+git submodule add git@github.com:davjand/database-migrations.git extensions/database-migrations --recursive
 #
 ###
 
