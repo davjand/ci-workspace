@@ -17,7 +17,7 @@
 ###git submodule add git@github.com:pixelninja/sitemap_xml.git extensions/sitemap_xml --recursive
 
 git submodule add git@github.com:symphonists/xmlimporter.git extensions/xmlimporter --recursive
-git submodule add git@github.com:creativedutchmen/email_template_manager.git extensions/email_template_manager --recursive
+#git submodule add git@github.com:creativedutchmen/email_template_manager.git extensions/email_template_manager --recursive
 git submodule add git@github.com:kanduvisla/importcsv.git extensions/importcsv --recursive
 
 #
@@ -49,7 +49,7 @@ git submodule add git@github.com:Solutions-Nitriques/save_and_return.git extensi
 #
 git submodule add git@github.com:nils-werner/dump_db.git extensions/dump_db --recursive
 git submodule add git@github.com:lewiswharf/symlink_manifest.git extensions/symlink_manifest --recursive
-git submodule add git@github.com:davjand/database-migrations.git extensions/database-migrations --recursive
+git submodule add git@github.com:davjand/database-migrations.git extensions/database_migrations --recursive
 #
 ###
 
