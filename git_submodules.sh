@@ -50,6 +50,7 @@ git submodule add git@github.com:Solutions-Nitriques/save_and_return.git extensi
 ### DATABASE EXTENSIONS
 #
 git submodule add git@github.com:nils-werner/dump_db.git extensions/dump_db --recursive
+git submodule add git://github.com/jetbackwards/CDI.git extension/cdi --recursive
 #
 ###
 
@@ -60,6 +61,12 @@ git submodule add git@github.com:nils-werner/less_compiler.git extensions/less_c
 git submodule add git@github.com:nils-werner/xslresourceloader.git extensions/xslresourceloader --recursive
 git submodule add git@github.com:ahwayakchih/sortdatasourcebyparam.git extensions/sortdatasourcebyparam --recursive
 git submodule add git@github.com:nickdunn/symql.git extensions/symql --recursive
+#
+###
+
+### AUTOMATION / DEPLOYMENT
+#
+git submodule add git@github.com:lewiswharf/symlink_manifest.git extensions/symlink_manifest --recursive
 #
 ###
 
