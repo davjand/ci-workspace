@@ -24,7 +24,7 @@
 git remote add symphony git@github.com:symphonycms/symphony-2.git
 git fetch symphony
 git merge symphony/master --no-edit
-
+git submodule update --init
 #
 ###
 
@@ -32,15 +32,15 @@ git merge symphony/master --no-edit
 
 ### Re-add all symphony default extensions as can prevent errors
 #
-rm .gitmodules
-git submodule add git@github.com:symphonycms/debugdevkit.git extensions/debugdevkit --recursive
-git submodule add git@github.com:symphonycms/export_ensemble.git extensions/export_ensemble --recursive
-git submodule add git@github.com:symphonycms/jit_image_manipulation.git extensions/jit_image_manipulation --recursive
-git submodule add git@github.com:symphonycms/maintenance_mode.git extensions/maintenance_mode --recursive
-git submodule add git@github.com:symphonycms/markdown.git extensions/markdown --recursive
-git submodule add git@github.com:symphonycms/profiledevkit.git extensions/profiledevkit --recursive
-git submodule add git@github.com:symphonycms/selectbox_link_field.git extensions/selectbox_link_field --recursive
-git submodule add git@github.com:symphonycms/xssfilter.git extensions/xssfilter --recursive
+#rm .gitmodules
+#git submodule add git@github.com:symphonycms/debugdevkit.git extensions/debugdevkit --recursive
+#git submodule add git@github.com:symphonycms/export_ensemble.git extensions/export_ensemble --recursive
+#git submodule add git@github.com:symphonycms/jit_image_manipulation.git extensions/jit_image_manipulation --recursive
+#git submodule add git@github.com:symphonycms/maintenance_mode.git extensions/maintenance_mode --recursive
+#git submodule add git@github.com:symphonycms/markdown.git extensions/markdown --recursive
+#git submodule add git@github.com:symphonycms/profiledevkit.git extensions/profiledevkit --recursive
+#git submodule add git@github.com:symphonycms/selectbox_link_field.git extensions/selectbox_link_field --recursive
+#git submodule add git@github.com:symphonycms/xssfilter.git extensions/xssfilter --recursive
 #
 ###
 
