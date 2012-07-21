@@ -4,7 +4,7 @@ git submodule add git://github.com/Solutions-Nitriques/auto_collapse_fields.git 
 
 git submodule add git://github.com/eKoeS/fancy.git "extensions/better_forms"
 git submodule add git://github.com/bauhuse/configuration.git "extensions/configuration"
-git submodule add git://github.com/remie/CDI.git "extensions/cdi"
+git submodule add git://github.com/jetbackwards/CDI.git "extensions/cdi"
 
 git submodule add git://github.com/kanduvisla/ckeditor.git "extensions/ckeditor"
 git submodule add git://github.com/czheng/datemodified.git "extensions/datemodified"
