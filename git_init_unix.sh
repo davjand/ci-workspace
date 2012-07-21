@@ -18,8 +18,8 @@
 
 # Pull Symphony
 git remote add symphony git@github.com:symphonycms/symphony-2.git
-git fetch workspace
-git merge workspace/master --no-edit
+git fetch symphony
+git merge symphony/master --no-edit
 
 ###
 
@@ -30,7 +30,7 @@ mv ./workspace.gitignore ./.gitignore
 ###
 
 #Grab extensions
-#sh git_submodules.sh
+sh git_submodules.sh
 
 ###
 
@@ -40,8 +40,9 @@ git submodule update --init
 ###
 
 # REMOTE REPO SETUP
-git remote add origin git@github.com:davjand/veo-website.git
 
 git add -A
 git commit -m "Initial Commit"
-git push origin master
+
+#git remote add origin git@github.com:davjand/ {INSERT REPO} .git
+#git push origin master
