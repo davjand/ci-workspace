@@ -9,10 +9,12 @@
 git init
 
 #Pull Workspace (Only if not in workspace!)
-#git pull git@github.com:davjand/sym-workspace.git
+git remote add workspace git@github.com:davjand/sym-workspace.git
+git fetch workspace master
 
 #Pull Symphony
-git pull git@github.com:symphonycms/symphony-2
+git remote add symphony git@github.com:symphonycms/symphony-2
+git fetch symphony master
 
 
 #grab extensions
@@ -24,4 +26,4 @@ git submodule update --init
 
 #Sort out the git ignore from symphony
 rm .gitignore
-mv workspace.gitignore .gitignore
+mv ./workspace.gitignore ./.gitignore
