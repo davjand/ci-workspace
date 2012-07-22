@@ -16,7 +16,7 @@
 ###git submodule add git@github.com:klaftertief/imagecropper.git public_html/extensions/imagecropper --recursive
 ###git submodule add git@github.com:pixelninja/sitemap_xml.git public_html/extensions/sitemap_xml --recursive
 
-git submodule add git@github.com:symphonists/xmlimporter.git public_html/extensions/xmlimporter --recursive
+#git submodule add git@github.com:symphonists/xmlimporter.git public_html/extensions/xmlimporter --recursive
 #git submodule add git@github.com:creativedutchmen/email_template_manager.git public_html/extensions/email_template_manager --recursive
 git submodule add git@github.com:kanduvisla/importcsv.git public_html/extensions/importcsv --recursive
 
