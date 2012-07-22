@@ -7,6 +7,7 @@
 install-log.txt
 public_html/manifest/cache
 public_html/manifest/tmp
+public_html/manifest/logs
 _docs/
 public_html/symphony/
 LICENSE
