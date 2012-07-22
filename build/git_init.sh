@@ -11,7 +11,7 @@
 
 #git init
 #git remote add workspace git@github.com:davjand/sym-workspace.git
-#git fetch workspace
+#git fetch workspace public_html
 #git merge workspace/master --no-edit
 
 #
@@ -22,7 +22,7 @@
 #
 
 git remote add symphony git@github.com:symphonycms/symphony-2.git
-git fetch symphony
+git fetch symphony public_html
 git merge symphony/master --no-edit
 #
 ###
@@ -30,35 +30,35 @@ git merge symphony/master --no-edit
 
 ### Re-add all symphony default extensions as can prevent errors
 #
-rm .gitmodules
-touch .gitmodules
+rm public_html/.gitmodules
+touch public_html/.gitmodules
 
-git rm --cached extensions/debugdevkit 
-git rm --cached extensions/export_ensemble
-git rm --cached extensions/jit_image_manipulation
-git rm --cached extensions/maintenance_mode
-git rm --cached extensions/markdown
-git rm --cached extensions/profiledevkit
-git rm --cached extensions/selectbox_link_field
-git rm --cached extensions/xssfilter
+git rm --cached public_html/extensions/debugdevkit 
+git rm --cached public_html/extensions/export_ensemble
+git rm --cached public_html/extensions/jit_image_manipulation
+git rm --cached public_html/extensions/maintenance_mode
+git rm --cached public_html/extensions/markdown
+git rm --cached public_html/extensions/profiledevkit
+git rm --cached public_html/extensions/selectbox_link_field
+git rm --cached public_html/extensions/xssfilter
 
-rm -r extensions/debugdevkit 
-rm -r extensions/export_ensemble
-rm -r extensions/jit_image_manipulation
-rm -r extensions/maintenance_mode
-rm -r extensions/markdown
-rm -r extensions/profiledevkit
-rm -r extensions/selectbox_link_field
-rm -r extensions/xssfilter
+rm -r public_html/extensions/debugdevkit 
+rm -r public_html/extensions/export_ensemble
+rm -r public_html/extensions/jit_image_manipulation
+rm -r public_html/extensions/maintenance_mode
+rm -r public_html/extensions/markdown
+rm -r public_html/extensions/profiledevkit
+rm -r public_html/extensions/selectbox_link_field
+rm -r public_html/extensions/xssfilter
 
-git submodule add git@github.com:symphonycms/debugdevkit.git extensions/debugdevkit --recursive
-git submodule add git@github.com:symphonycms/export_ensemble.git extensions/export_ensemble --recursive
-git submodule add git@github.com:symphonycms/jit_image_manipulation.git extensions/jit_image_manipulation --recursive
-git submodule add git@github.com:symphonycms/maintenance_mode.git extensions/maintenance_mode --recursive
-git submodule add git@github.com:symphonycms/markdown.git extensions/markdown --recursive
-git submodule add git@github.com:symphonycms/profiledevkit.git extensions/profiledevkit --recursive
-git submodule add git@github.com:symphonycms/selectbox_link_field.git extensions/selectbox_link_field --recursive
-git submodule add git@github.com:symphonycms/xssfilter.git extensions/xssfilter --recursive
+git submodule add git@github.com:symphonycms/debugdevkit.git public_html/extensions/debugdevkit --recursive
+git submodule add git@github.com:symphonycms/export_ensemble.git public_html/extensions/export_ensemble --recursive
+git submodule add git@github.com:symphonycms/jit_image_manipulation.git public_html/extensions/jit_image_manipulation --recursive
+git submodule add git@github.com:symphonycms/maintenance_mode.git public_html/extensions/maintenance_mode --recursive
+git submodule add git@github.com:symphonycms/markdown.git public_html/extensions/markdown --recursive
+git submodule add git@github.com:symphonycms/profiledevkit.git public_html/extensions/profiledevkit --recursive
+git submodule add git@github.com:symphonycms/selectbox_link_field.git public_html/extensions/selectbox_link_field --recursive
+git submodule add git@github.com:symphonycms/xssfilter.git public_html/extensions/xssfilter --recursive
 #
 ###
 
@@ -66,8 +66,8 @@ git submodule add git@github.com:symphonycms/xssfilter.git extensions/xssfilter 
 ### Sort out the git ignore from symphony
 #
 
-rm .gitignore
-mv ./workspace.gitignore ./.gitignore
+rm public_html/.gitignore
+mv ./public_html/workspace.gitignore ./public_html/.gitignore
 
 #
 ###
@@ -75,7 +75,7 @@ mv ./workspace.gitignore ./.gitignore
 ###Grab extensions
 #
 
-sh git_submodules.sh
+sh build/git_submodules.sh
 
 #
 ###
@@ -90,7 +90,7 @@ git submodule update --init
 
 ### FILE PERMISSIONS (NEEDS CHANGING AFTER INSTALL)
 #
-chmod -R 777 . 
+chmod -R 777 public_html 
 #
 ###
 
