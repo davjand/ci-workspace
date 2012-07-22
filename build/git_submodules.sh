@@ -48,7 +48,7 @@ git submodule add git@github.com:Solutions-Nitriques/save_and_return.git public_
 ### DATABASE EXTENSIONS / AUTOMATION / DEPLOYMENT
 #
 git submodule add git@github.com:nils-werner/dump_db.git public_html/extensions/dump_db --recursive
-git submodule add git@github.com:lewiswharf/symlink_manifest.git public_html/extensions/symlink_manifest --recursive
+#git submodule add git@github.com:lewiswharf/symlink_manifest.git public_html/extensions/symlink_manifest --recursive
 git submodule add git@github.com:davjand/database-migrations.git public_html/extensions/database_migrations --recursive
 #
 ###
