@@ -67,15 +67,6 @@ git submodule add git@github.com:symphonycms/xssfilter.git public_html/extension
 #
 ###
 
-
-### Sort out the git ignore from symphony
-#
-
-rm public_html/.gitignore
-
-#
-###
-
 ###Grab extensions
 #
 
