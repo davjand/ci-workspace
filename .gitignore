@@ -1,0 +1,14 @@
+._*
+.Apple*
+.DS_Store
+*.esproj
+*~
+*.geany
+install-log.txt
+public_html/manifest/cache
+public_html/manifest/tmp
+_docs/
+public_html/symphony/
+LICENSE
+public_html/install/
+public_html/workspace/uploads
