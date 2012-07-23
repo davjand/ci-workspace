@@ -6,7 +6,7 @@
 #
 ###
 
-git init
+#git init
 git remote add workspace git@github.com:davjand/sym-workspace
 git pull workspace master
 sh build/git_init.sh
