@@ -50,6 +50,7 @@
 ##git submodule add git@github.com:nils-werner/dump_db.git public_html/extensions/dump_db --recursive
 ##git submodule add git@github.com:lewiswharf/symlink_manifest.git public_html/extensions/symlink_manifest --recursive
 git submodule add git@github.com:davjand/database-migrations.git public_html/extensions/database_migrations --recursive
+git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql --recursive
 #
 ###
 
@@ -59,7 +60,7 @@ git submodule add git@github.com:davjand/database-migrations.git public_html/ext
 ##git submodule add git@github.com:nils-werner/less_compiler.git public_html/extensions/less_compiler --recursive
 ##git submodule add git@github.com:nils-werner/xslresourceloader.git public_html/extensions/xslresourceloader --recursive
 ##git submodule add git@github.com:ahwayakchih/sortdatasourcebyparam.git public_html/extensions/sortdatasourcebyparam --recursive
-##git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql --recursive
+
 #
 ###
 
