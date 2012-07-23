@@ -27,8 +27,8 @@
 ### ADMINISTRATION EXTENSIONS
 #
 ##git submodule add git@github.com:symphonists/tracker.git public_html/extensions/tracker --recursive
-git submodule add git@github.com:Solutions-Nitriques/duplicate_section.git public_html/extensions/duplicate_section --recursive
-git submodule add git@github.com:nickdunn/publishfiltering.git public_html/extensions/publishfiltering --recursive
+##git submodule add git@github.com:Solutions-Nitriques/duplicate_section.git public_html/extensions/duplicate_section --recursive
+##git submodule add git@github.com:nickdunn/publishfiltering.git public_html/extensions/publishfiltering --recursive
 ##git submodule add git@github.com:alpacaaa/resave_entries.git public_html/extensions/resave_entries --recursive
 ##git submodule add git@github.com:nickdunn/sitemap.git public_html/extensions/sitemap --recursive
 ##git submodule add git@github.com:nickdunn/entity_diagram.git public_html/extensions/entity_diagram --recursive
@@ -56,8 +56,8 @@ git submodule add git@github.com:davjand/database-migrations.git public_html/ext
 
 ### DEVELOPMENTAL WORKFLOW
 #
-git submodule add git@github.com:nils-werner/less_compiler.git public_html/extensions/less_compiler --recursive
-git submodule add git@github.com:nils-werner/xslresourceloader.git public_html/extensions/xslresourceloader --recursive
+##git submodule add git@github.com:nils-werner/less_compiler.git public_html/extensions/less_compiler --recursive
+##git submodule add git@github.com:nils-werner/xslresourceloader.git public_html/extensions/xslresourceloader --recursive
 ##git submodule add git@github.com:ahwayakchih/sortdatasourcebyparam.git public_html/extensions/sortdatasourcebyparam --recursive
 ##git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql --recursive
 #
@@ -72,12 +72,12 @@ git submodule add git@github.com:nils-werner/xslresourceloader.git public_html/e
 
 ### FIELDS
 #
-git submodule add git@github.com:nickdunn/publish_tabs.git public_html/extensions/publish_tabs --recursive
+##git submodule add git@github.com:nickdunn/publish_tabs.git public_html/extensions/publish_tabs --recursive
 ##git submodule add git@github.com:rowan-lewis/textboxfield.git public_html/extensions/textboxfield --recursive
-git submodule add git@github.com:michael-e/uniqueuploadfield.git public_html/extensions/uniqueuploadfield --recursive
+##git submodule add git@github.com:michael-e/uniqueuploadfield.git public_html/extensions/uniqueuploadfield --recursive
 ##git submodule add git@github.com:symphonycms/numberfield.git public_html/extensions/numberfield --recursive
-git submodule add git@github.com:hananils/subsectionmanager.git public_html/extensions/subsectionmanager --recursive
-git submodule add git@github.com:hananils/datetime.git public_html/extensions/datetime --recursive
+##git submodule add git@github.com:hananils/subsectionmanager.git public_html/extensions/subsectionmanager --recursive
+##git submodule add git@github.com:hananils/datetime.git public_html/extensions/datetime --recursive
 ##git submodule add git@github.com:nickdunn/order_entries.git public_html/extensions/order_entries --recursive
 ##git submodule add git@github.com:kanduvisla/tabbed_textarea.git public_html/extensions/tabbed_textarea --recursive
 ##git submodule add git@github.com:symphonists/referencelink.git public_html/extensions/referencelink --recursive
@@ -87,7 +87,7 @@ git submodule add git@github.com:hananils/datetime.git public_html/extensions/da
 
 ### TEXT FORMATTERS
 #
-git submodule add git@github.com:kanduvisla/ckeditor.git public_html/extensions/ckeditor --recursive
+##git submodule add git@github.com:kanduvisla/ckeditor.git public_html/extensions/ckeditor --recursive
 #
 ###
 
@@ -102,7 +102,7 @@ git submodule add git@github.com:vlad-ghita/limit_section_entries.git public_htm
 ##git submodule add git@github.com:ahwayakchih/improvedpageresolve.git public_html/extensions/improvedpageresolve --recursive
 ##git submodule add git@github.com:symphonists/globalresourceloader.git public_html/extensions/globalresourceloader --recursive
 ##git submodule add git@github.com:bauhouse/configuration.git public_html/extensions/configuration --recursive ## IS CAUSING ERRORS
-git submodule add git@github.com:symphonists/content_type_mappings.git public_html/extensions/content_type_mappings --recursive
+##git submodule add git@github.com:symphonists/content_type_mappings.git public_html/extensions/content_type_mappings --recursive
 
 #
 ###
