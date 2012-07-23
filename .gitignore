@@ -9,7 +9,7 @@ public_html/manifest/cache
 public_html/manifest/tmp
 public_html/manifest/logs
 public_html/manifest/config.php
-public_html/workspace/migrations/queries-run-locally.csv.csv
+public_html/workspace/migrations/queries-run-locally.csv
 _docs/
 LICENSE
 public_html/install/
