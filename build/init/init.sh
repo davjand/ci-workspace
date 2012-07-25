@@ -11,7 +11,7 @@
 
 #git init
 #git remote add workspace git@github.com:davjand/sym-workspace.git
-#git fetch workspace public_html
+#git fetch workspace
 #git merge workspace/master --no-edit
 
 #
@@ -21,14 +21,16 @@
 ### Pull Symphony
 #
 
-#git remote add symphony git@github.com:symphonycms/symphony-2.git
-#git fetch symphony public_html
-#git merge symphony/master --no-edit
-
 git clone git@github.com:symphonycms/symphony-2.git symphony
 mv symphony/* public_html
 rm -R -f symphony
 
+#
+###
+
+### FILE PERMISSIONS (NEEDS CHANGING AFTER INSTALL)
+#
+chmod -R 777 public_html 
 #
 ###
 
@@ -67,10 +69,11 @@ git submodule add git@github.com:symphonycms/xssfilter.git public_html/extension
 #
 ###
 
-###Grab extensions
+###Grab the needed extensions
 #
 
-sh build/git_submodules.sh
+git submodule add git@github.com:davjand/database-migrations.git public_html/extensions/database_migrations --recursive
+git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql --recursive
 
 #
 ###
@@ -83,20 +86,11 @@ git submodule update --init
 #
 ###
 
-### FILE PERMISSIONS (NEEDS CHANGING AFTER INSTALL)
-#
-chmod -R 777 public_html 
-#
-###
-
-### REMOTE REPO SETUP
+### Commit
 #
 
 git add -A
 git commit -m "Initial Commit"
-
-#git remote add origin git@github.com:davjand/ {INSERT REPO} .git
-#git push origin master
 
 #
 ###

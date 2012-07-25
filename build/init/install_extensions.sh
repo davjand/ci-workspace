@@ -49,8 +49,6 @@
 #
 ##git submodule add git@github.com:nils-werner/dump_db.git public_html/extensions/dump_db --recursive
 ##git submodule add git@github.com:lewiswharf/symlink_manifest.git public_html/extensions/symlink_manifest --recursive
-git submodule add git@github.com:davjand/database-migrations.git public_html/extensions/database_migrations --recursive
-git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql --recursive
 #
 ###
 
@@ -97,7 +95,7 @@ git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql
 #
 ###git submodule add git@github.com:Solutions-Nitriques/static_section.git public_html/extensions/static_section --recursive
 ###Seems to be buggy, alternative below:
-git submodule add git@github.com:vlad-ghita/limit_section_entries.git public_html/extensions/limit_section_entries --recursive
+##git submodule add git@github.com:vlad-ghita/limit_section_entries.git public_html/extensions/limit_section_entries --recursive
 
  
 ##git submodule add git@github.com:ahwayakchih/improvedpageresolve.git public_html/extensions/improvedpageresolve --recursive
