@@ -13,4 +13,4 @@ git remote add workspace git@github.com:davjand/sym-workspace.git
 git fetch workspace
 git merge workspace/master --no-edit
 
-sh build/init/git_init.sh
+sh build/init/init.sh
