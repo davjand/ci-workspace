@@ -17,10 +17,10 @@ $INSTALL_DIRECTORY = "public_html/";
 
 //SORT OUT THE HTACCESS
 //Shamlessly stolen from symphony installer
-$rewrite_base = ltrim(preg_replace('/\/build/local$/i', NULL, dirname($_SERVER['PHP_SELF'])), '/public_html/');
+$rewrite_base = ltrim(str_replace("build/local","public_html", dirname($_SERVER['PHP_SELF'])));
 $htaccess = str_replace(
 	'<!-- REWRITE_BASE -->', $rewrite_base,
-	file_get_contents($BUILD_DIRECTORY . '.htaccess')
+	file_get_contents($BUILD_DIRECTORY . 'htaccess.txt')
 );
 file_put_contents($INSTALL_DIRECTORY.".htaccess",$htaccess);			
 
