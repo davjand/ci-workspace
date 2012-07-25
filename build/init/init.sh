@@ -62,6 +62,7 @@ git submodule add git@github.com:symphonycms/xssfilter.git public_html/extension
 
 git submodule add git@github.com:davjand/database-migrations.git public_html/extensions/database_migrations --recursive
 git submodule add git@github.com:nickdunn/symql.git public_html/extensions/symql --recursive
+git submodule add git@github.com:vlad-ghita/limit_section_entries.git public_html/extensions/limit_section_entries --recursive
 
 #
 ###

@@ -98,10 +98,6 @@
 
 ### ESSENTIALS EXTENSIONS
 #
-###git submodule add git@github.com:Solutions-Nitriques/static_section.git public_html/extensions/static_section --recursive
-###Seems to be buggy, alternative below:
-##git submodule add git@github.com:vlad-ghita/limit_section_entries.git public_html/extensions/limit_section_entries --recursive
-
  
 ##git submodule add git@github.com:ahwayakchih/improvedpageresolve.git public_html/extensions/improvedpageresolve --recursive
 ##git submodule add git@github.com:symphonists/globalresourceloader.git public_html/extensions/globalresourceloader --recursive
