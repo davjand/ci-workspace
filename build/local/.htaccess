@@ -4,7 +4,7 @@ Options +FollowSymlinks -Indexes
 <IfModule mod_rewrite.c>
 
 	RewriteEngine on
-	RewriteBase /~david/sym-workspace-complete/public_html
+	RewriteBase /<!-- REWRITE_BASE -->
 
 	### SECURITY - Protect crucial files
 	RewriteRule ^manifest/(.*)$ - [F]

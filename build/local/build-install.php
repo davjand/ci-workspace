@@ -11,15 +11,22 @@
  *
 */
 
+$BUILD_DIRECTORY = "build/local";
+$INSTALL_DIRECTORY = "public_html/";
 
-// This file will be copied to the root directory when the install_local.sh script is run so can thus be accessed
-// from http://mydomain.com/install.php
 
+//SORT OUT THE HTACCESS
+//Shamlessly stolen from symphony installer
+$rewrite_base = ltrim(preg_replace('/\/build/local$/i', NULL, dirname($_SERVER['PHP_SELF'])), '/public_html/');
+$htaccess = str_replace(
+	'<!-- REWRITE_BASE -->', $rewrite_base,
+	file_get_contents($BUILD_DIRECTORY . '.htaccess')
+);
+file_put_contents($INSTALL_DIRECTORY.".htaccess",$htaccess);			
 
-//PSEUDO CODE
 
 // CONNECT TO DB
-include("../public_html/manifest/config.php");
+include("public_html/manifest/config.php");
 
 $mysqli = new mysqli(
 	$settings['database']['host'],
@@ -36,6 +43,6 @@ if ($mysqli->connect_errno) {
 }
 
 //run the query
-$mysqli::multi_query(file_get_contents('../public_html/workspace/migrations/baseline.sql')); 
+$mysqli->multi_query(file_get_contents('public_html/workspace/migrations/baseline.sql')); 
 
 ?>

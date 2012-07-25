@@ -14,7 +14,4 @@
 git submodule update --init
 
 cp build/local/config.php public_html/manifest/config.php
-cp build/local/.htaccess public_html/.htaccess
-
-#cp build/local/install.php public_html/install.php
 php build/local/build-install.php

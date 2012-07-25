@@ -1,5 +1,13 @@
 <?php
 
+/* DEPRECIATED
+
+ * HAS BEEN REPLACED BY INLINE PHP SCRIPT BUILD-INSTALL.PHP
+ * MAY BE REDEVELOPED IN CASE NO SHELL ACCESS
+
+*/
+
+
 /* PHP Installer for workspace
  *
  * @version: 0.1
