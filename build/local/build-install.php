@@ -11,7 +11,7 @@
  *
 */
 
-$BUILD_DIRECTORY = "build/local";
+$BUILD_DIRECTORY = "build/local/";
 $INSTALL_DIRECTORY = "public_html/";
 
 
