@@ -1,0 +1,33 @@
+[submodule "public_html/extensions/debugdevkit"]
+	path = public_html/extensions/debugdevkit
+	url = git@github.com:symphonycms/debugdevkit.git
+[submodule "public_html/extensions/export_ensemble"]
+	path = public_html/extensions/export_ensemble
+	url = git@github.com:symphonycms/export_ensemble.git
+[submodule "public_html/extensions/jit_image_manipulation"]
+	path = public_html/extensions/jit_image_manipulation
+	url = git@github.com:symphonycms/jit_image_manipulation.git
+[submodule "public_html/extensions/maintenance_mode"]
+	path = public_html/extensions/maintenance_mode
+	url = git@github.com:symphonycms/maintenance_mode.git
+[submodule "public_html/extensions/markdown"]
+	path = public_html/extensions/markdown
+	url = git@github.com:symphonycms/markdown.git
+[submodule "public_html/extensions/profiledevkit"]
+	path = public_html/extensions/profiledevkit
+	url = git@github.com:symphonycms/profiledevkit.git
+[submodule "public_html/extensions/selectbox_link_field"]
+	path = public_html/extensions/selectbox_link_field
+	url = git@github.com:symphonycms/selectbox_link_field.git
+[submodule "public_html/extensions/xssfilter"]
+	path = public_html/extensions/xssfilter
+	url = git@github.com:symphonycms/xssfilter.git
+[submodule "public_html/extensions/database_migrations"]
+	path = public_html/extensions/database_migrations
+	url = git@github.com:davjand/database-migrations.git
+[submodule "public_html/extensions/symql"]
+	path = public_html/extensions/symql
+	url = git@github.com:nickdunn/symql.git
+[submodule "public_html/extensions/limit_section_entries"]
+	path = public_html/extensions/limit_section_entries
+	url = git@github.com:vlad-ghita/limit_section_entries.git
