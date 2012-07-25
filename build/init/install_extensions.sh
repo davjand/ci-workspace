@@ -1,6 +1,11 @@
-### SYMPHONY SUBMODULE INSTALLATTION
+### INSTALL_EXTENSIONS.SH
 #
-# Common Extensions are at the bottom, ones that may not be required are listed at the top
+# A Batch file to install extensions for symphony.
+# Most common extensions are included.
+# Uncommon all required extensions and then run:
+#
+# sh build/init/install_extensions.sh from the git root
+#
 # @author: David Anderson
 # @date: 06-06-2012
 #

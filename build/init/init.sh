@@ -6,18 +6,6 @@
 #
 ###
 
-### INITIAL - UNCOMMENT TO RUN AS A COMPLETE INSTALLER
-#
-
-#git init
-#git remote add workspace git@github.com:davjand/sym-workspace.git
-#git fetch workspace
-#git merge workspace/master --no-edit
-
-#
-###
-
-
 ### Pull Symphony
 #
 
