@@ -72,9 +72,9 @@
 		###### REGION ######
 		'region' => array(
 			'time_format' => 'g:i a',
-			'date_format' => 'm/d/Y',
+			'date_format' => 'd F Y',
 			'datetime_separator' => ' ',
-			'timezone' => 'Africa/Abidjan',
+			'timezone' => 'UTC',
 		),
 		########
 
