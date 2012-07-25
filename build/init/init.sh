@@ -37,14 +37,14 @@ git rm --cached public_html/extensions/profiledevkit
 git rm --cached public_html/extensions/selectbox_link_field
 git rm --cached public_html/extensions/xssfilter
 
-rm -r public_html/extensions/debugdevkit 
-rm -r public_html/extensions/export_ensemble
-rm -r public_html/extensions/jit_image_manipulation
-rm -r public_html/extensions/maintenance_mode
-rm -r public_html/extensions/markdown
-rm -r public_html/extensions/profiledevkit
-rm -r public_html/extensions/selectbox_link_field
-rm -r public_html/extensions/xssfilter
+#rm -r public_html/extensions/debugdevkit 
+#rm -r public_html/extensions/export_ensemble
+#rm -r public_html/extensions/jit_image_manipulation
+#rm -r public_html/extensions/maintenance_mode
+#rm -r public_html/extensions/markdown
+#rm -r public_html/extensions/profiledevkit
+#rm -r public_html/extensions/selectbox_link_field
+#rm -r public_html/extensions/xssfilter
 
 git submodule add git@github.com:symphonycms/debugdevkit.git public_html/extensions/debugdevkit --recursive
 git submodule add git@github.com:symphonycms/export_ensemble.git public_html/extensions/export_ensemble --recursive
