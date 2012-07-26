@@ -18,7 +18,7 @@ rm -R -f symphony
 
 ### FILE PERMISSIONS (NEEDS CHANGING AFTER INSTALL)
 #
-chmod -R 777 public_html 
+chmod -R 755 public_html 
 #
 ###
 

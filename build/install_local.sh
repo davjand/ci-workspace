@@ -15,3 +15,8 @@ git submodule update --init
 
 cp build/local/config.php public_html/manifest/config.php
 php build/local/build-install.php
+
+chmod -R 755 public_html 
+
+chmod 644 public_html/.htaccess
+chmod 644 public_html/manifest/config.php

@@ -1,0 +1,9 @@
+============================================
+Log Created: 2012-07-25T19:19:04+00:00
+============================================
+Symphony Log
+Opened:  2012-07-25T19:19:04+00:00
+Version: 2.3
+Domain:  127.0.0.1/~david/ci-workspace/public_html
+--------------------------------------------
+25 July 2012 7:19 pm > User Notice: FrontendPageNotFoundExceptionHandler 1024 - The page you requested does not exist. in file /Users/david/Sites/ci-workspace/public_html/symphony/lib/toolkit/class.frontendpage.php on line 298
