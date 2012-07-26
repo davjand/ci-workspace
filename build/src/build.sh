@@ -9,8 +9,8 @@
 ###
 
 git init
-git remote add workspace git@github.com:davjand/ci-workspace.git
+git remote add workspace git@github.com:davjand/sym-workspace.git
 git fetch workspace
 git merge workspace/master --no-edit
 
-git submodule update --init
+sh build/init/init.sh
