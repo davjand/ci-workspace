@@ -16,7 +16,8 @@ git submodule update --init
 cp build/local/config.php public_html/manifest/config.php
 php build/local/build-install.php
 
-chmod -R 755 public_html 
+#permission issues - ONLY TO BE USED LOCALLY
 
-chmod 644 public_html/.htaccess
-chmod 644 public_html/manifest/config.php
+chmod -R 777 public_html/workspace/
+chmod -R 777 public_html/manifest/
+chmod -R 777 public_html/.htaccess
