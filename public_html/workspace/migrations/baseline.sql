@@ -21,7 +21,6 @@ CREATE TABLE `sym_authors` (
 INSERT INTO sym_authors (`id`,`username`,`password`,`first_name`,`last_name`,`email`,`last_seen`,`user_type`,`primary`,`default_area`,`auth_token_active`,`language`) VALUES ('1','admin','d033e22ae348aeb5660fc2140aec35850c4da997','Admin','Name','dave@veodesign.co.uk','2012-07-23 19:05:34','developer','yes','','no','');
 
 
-
 DROP TABLE IF EXISTS sym_cache;
 
 CREATE TABLE `sym_cache` (

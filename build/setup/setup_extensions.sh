@@ -106,3 +106,5 @@
 
 #
 ###
+
+git submodule update --init
