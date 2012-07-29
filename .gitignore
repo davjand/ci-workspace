@@ -1,4 +1,5 @@
 ._*
+.ssh
 public_html/.htaccess
 .Apple*
 .DS_Store
