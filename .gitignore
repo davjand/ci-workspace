@@ -4,6 +4,10 @@ public_html/.htaccess
 .DS_Store
 .localised
 *.esproj
+pear/
+.bashrc
+.pearrc
+.bash-history
 *~
 *.geany
 install-log.txt
