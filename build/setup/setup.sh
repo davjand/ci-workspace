@@ -24,7 +24,7 @@ git submodule update --init
 
 
 #copy the install directory
-cp build/install/* public_html/install/*
+cp -r build/install/ public_html/install/
 
 #permission issues - ONLY TO BE USED LOCALLY
 
