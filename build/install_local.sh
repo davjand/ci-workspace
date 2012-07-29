@@ -21,7 +21,7 @@ cp -r build/install/ public_html/install/
 
 #permission issues - ONLY TO BE USED LOCALLY
 
-chmod -R 644 public_html/workspace/
-chmod -R 644 public_html/manifest/
-chmod -R 755 public_html/install/
-chmod  644 public_html/
+chmod -R 777 public_html/workspace/
+chmod -R 777 public_html/manifest/
+chmod -R 777 public_html/install/
+chmod  777 public_html/
