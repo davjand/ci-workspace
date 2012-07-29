@@ -79,7 +79,7 @@ This assumes that you have a second machine from which you want to work on the p
 2. Create a git repository that is accessible via localhost (git init)
 3. Add your origin remote (git remote add origin git@github.com:your-name/repo-name)
 4. Pull your repository from origin (git pull origin master)
-5. Run the install script (sh build/install.sh)
+5. Run the install script (sh build/install_local.sh)
 6. Open your browsers to the public_html/install directory 
 7. Run the symphony installation wizard and remove the install directory
 8. Commit your initial site to your repository (git add -A, git commit -m "Initial Commit", git push origin master)
