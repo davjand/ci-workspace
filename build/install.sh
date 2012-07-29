@@ -22,9 +22,5 @@ cp -r build/install/ public_html/install/
 
 chmod -R 777 public_html/workspace/
 chmod -R 777 public_html/manifest/
-chmod -R 777 public_html/.htaccess
-
-#install permissions
-
 chmod -R 777 public_html/install/
 chmod  777 public_html/
