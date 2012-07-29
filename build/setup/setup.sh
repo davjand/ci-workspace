@@ -21,6 +21,7 @@ git fetch workspace
 git merge workspace/master --no-edit
 
 git submodule update --init
+git submodule foreach git pull origin master
 
 
 #copy the install directory

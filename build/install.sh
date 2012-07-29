@@ -14,6 +14,7 @@
 ###
 
 git submodule update --init
+git submodule foreach git pull origin master
 
 #copy the install directory
 cp -r build/install/ public_html/install/
