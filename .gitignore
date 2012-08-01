@@ -9,6 +9,7 @@ pear/
 .bashrc
 .pearrc
 .bash-history
+curl_cookie.txt
 *~
 *.geany
 install-log.txt
