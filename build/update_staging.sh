@@ -23,8 +23,8 @@ git merge origin/master --quiet
 git submodule update --init
 
 #install any updates via curl
-curl -c -s curl_cookie.txt http://yourwebsite.com/symphony/login/TOKEN/
-curl -b -s curl_cookie.txt http://yourwebsite.com/symphony/extension/database_migrations/?action=update
+curl -c curl_cookie.txt -s http://yourwebsite.com/symphony/login/TOKEN/
+curl -b curl_cookie.txt -s http://yourwebsite.com/symphony/extension/database_migrations/?action=update
 
 #remove the cookie file
 rm curl_cookie.txt 
