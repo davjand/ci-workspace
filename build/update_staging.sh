@@ -16,11 +16,8 @@
 ###
 
 #Pull the latest and force a merge (incase tracked files have accumulated)
-git add -A
-git commit -m "Pre-merge"
-
 git fetch origin
-git merge origin/master --no-edit --quiet
+git merge origin/master --no-edit
 
 ##Update Submodules
 git submodule update --init
