@@ -17,7 +17,7 @@
 
 #Pull the latest and force a merge (incase tracked files have accumulated)
 git fetch origin
-git merge origin/master --no-edit
+git merge origin/master --quiet
 
 ##Update Submodules
 git submodule update --init
