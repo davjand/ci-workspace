@@ -43,3 +43,4 @@ Options +FollowSymlinks -Indexes
 
 </IfModule>
 ######
+AddType x-httpd-php53 .php
