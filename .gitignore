@@ -21,5 +21,4 @@ public_html/install.php
 public_html/workspace/uploads
 public_html/manifest/config.php
 data/queries-run-locally.csv
-data-backups/
 curl_cookie.txt

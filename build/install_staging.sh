@@ -30,3 +30,4 @@ chmod -R 755 public_html/manifest/
 chmod -R 755 public_html/install/
 chmod  755 public_html/
 chmod -R 755 data/
+chmod -R 755 data-backups/
