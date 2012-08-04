@@ -171,9 +171,9 @@
 			}
 
 			// Make sure the install.sql file exists
-			if(!file_exists(DOCROOT . '../data/baseline.sql') || !is_readable(DOCROOT . '../data/baseline.sql')){
+			if(!file_exists(DOCROOT . '/../data/baseline.sql') || !is_readable(DOCROOT . '/../data/baseline.sql')){
 				$errors[] = array(
-					'msg' => __('Missing install.sql file'),
+					'msg' => __('Missing baseline.sql file: '.DOCROOT . '/../data/baseline.sql'),
 					'details'  => __('It appears that %s is either missing or not readable. This is required to populate the database and must be uploaded before installation can commence. Ensure that PHP has read permissions.', array('<code>install.sql</code>'))
 				);
 			}
@@ -420,7 +420,7 @@
 			Symphony::Log()->pushToLog('MYSQL: Importing Table Schema', E_NOTICE, true, true);
 
 			try{
-				Symphony::Database()->import(file_get_contents(DOCROOT . '../data/baseline.sql'), true);
+				Symphony::Database()->import(file_get_contents(DOCROOT . '/../data/baseline.sql'), true);
 			}
 			catch(DatabaseException $e){
 				self::__abort(
