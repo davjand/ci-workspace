@@ -420,7 +420,45 @@
 			Symphony::Log()->pushToLog('MYSQL: Importing Table Schema', E_NOTICE, true, true);
 
 			try{
-				Symphony::Database()->import(file_get_contents(DOCROOT . '/../data/baseline.sql'), true);
+				$importFile = DOCROOT . '/../data/baseline.sql';
+				
+				if(filesize($importFile)< (5* 1024 * 1024)){
+					Symphony::Database()->import(file_get_contents($importFile), true);
+				}
+				//http://stackoverflow.com/questions/1883079/best-practice-import-mysql-file-in-php-split-queries
+				else{
+					//overcome large files
+					set_time_limit(0);
+					$delimiter=";";
+				
+				    if (is_file($importFile) === true){
+				        $file = fopen($importFile, 'r');
+				
+				        if (is_resource($file) === true){
+				            $query = array();
+							
+				            while (feof($file) === false){
+				                $query[] = fgets($file);
+				
+				                if (preg_match('~' . preg_quote($delimiter, '~') . '\s*$~iS', end($query)) === 1) {
+				                    $query = trim(implode('', $query));
+				                    
+				                    Symphony::Database()->import($query, true);
+				
+				                    while (ob_get_level() > 0){
+				                        ob_end_flush();
+				                    }
+				                    flush();
+				                }
+				
+				                if (is_string($query) === true){
+				                    $query = array();
+				                }
+				            }
+				            fclose($file);
+				        }
+					}
+				}
 			}
 			catch(DatabaseException $e){
 				self::__abort(
@@ -446,9 +484,9 @@
 				), 'tbl_authors');
 			}
 			catch(DatabaseException $e){
-				self::__abort(
+				/*self::__abort(
 					'There was an error while trying create the default author. MySQL returned: ' . $e->getDatabaseErrorCode() . ': ' . $e->getDatabaseErrorMessage(),
-				$start);
+				$start);*/
 			}
 
 			// Configuration: Populating array
