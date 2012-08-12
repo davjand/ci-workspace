@@ -16,6 +16,7 @@
 ###
 
 #Pull the latest and force a merge (incase tracked files have accumulated)
+git reset HEAD --hard
 git fetch origin
 git merge origin/master --quiet
 
